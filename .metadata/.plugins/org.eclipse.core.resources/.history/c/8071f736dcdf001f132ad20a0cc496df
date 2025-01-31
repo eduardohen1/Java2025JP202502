@@ -24,7 +24,7 @@ public class Principal {
 		else 
 			System.out.println("Vou ter que gastar com festa!");
 		
-		idade = 0;
+		idade = 50;
 		switch(idade) {
 			case 2:
 				System.out.println("Ainda esta de fralda");

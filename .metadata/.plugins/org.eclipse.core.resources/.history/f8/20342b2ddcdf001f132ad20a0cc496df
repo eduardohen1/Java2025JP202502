@@ -24,7 +24,7 @@ public class Principal {
 		else 
 			System.out.println("Vou ter que gastar com festa!");
 		
-		idade = 0;
+		idade = 19;
 		switch(idade) {
 			case 2:
 				System.out.println("Ainda esta de fralda");
@@ -35,15 +35,14 @@ public class Principal {
 			case 16:
 				System.out.println("Posso votar nas eleicoes");
 				break;
-			case 18:
-			case 19:
-			case 20:
-				System.out.println("Posso tirar habilitacao");
-				break;
 			default:
-				if(idade > 0) {
-					System.out.println("Aqui pode qualquer valor que nao esteja escrito");
-				}
+			//case 18:
+			//case 19:
+			//case 20:
+				System.out.println("Posso tirar habilitacao");
+				//break;
+			//default:
+				System.out.println("Aqui pode qualquer valor que nao esteja escrito");
 				break;
 		}
 		
