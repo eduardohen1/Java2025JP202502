@@ -1,0 +1,13 @@
+package br.com.ehmf;
+
+public class Pessoa {
+	
+	//atributos
+	String nome;
+	String endereco;
+	String email;
+	
+	//construtor(es)
+	//métodos
+	
+}

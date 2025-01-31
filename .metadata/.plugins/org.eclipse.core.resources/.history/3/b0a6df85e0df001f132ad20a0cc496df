@@ -1,0 +1,25 @@
+package br.com.ehmf;
+
+public class Pessoa {
+	
+	//atributos
+	String nome;
+	String endereco;
+	String email;
+	
+	//construtor(es)
+	
+	//métodos
+	public void trabalhar() {
+		System.out.println("Ir para o trabalho");
+	}
+	
+	public void estudar() {
+		System.out.println("Estudar");
+	}
+	
+	public void lazer() {
+		System.out.println("Tentar achar um filme no Netflix...");
+	}
+	
+}

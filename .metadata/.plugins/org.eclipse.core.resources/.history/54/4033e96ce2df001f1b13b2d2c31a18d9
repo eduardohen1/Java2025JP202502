@@ -1,0 +1,38 @@
+package br.com.ehmf;
+
+public class Pessoa {
+	
+	//atributos
+	String nome;
+	String endereco;
+	String email;
+	
+	//construtor(es)
+	
+	//métodos
+	public void trabalhar() {
+		System.out.println(nome + " indo para o trabalho");
+	}
+	
+	public void estudar() {
+		System.out.println(nome + " indo estudar");
+	}
+	
+	public void lazer(int tipoLazer) {
+		switch(tipoLazer) {
+			case 0:
+				System.out.println(nome + ", passear com o pet");
+				break;
+			case 1:
+				System.out.println(nome + ", ir para o Crossfit 😢😢");
+				break;
+			case 2:
+				System.out.println(nome + ", tentar achar um filme no Netflix...");
+				break;
+			default:
+				System.out.println(nome + ", hora de ficar de boa");
+				break;
+		}		
+	}
+	
+}

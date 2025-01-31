@@ -75,6 +75,25 @@ public class Principal {
 		
 		System.out.println("------------------------");
 		System.out.println(":: ORIENTACAO A OBJETOS ::");
+		Pessoa pessoa = new Pessoa();
+		pessoa.nome = "Eduardo";
+		pessoa.email = "eherique@minsait.com";
+		pessoa.endereco = "Minas Gerais";
+		pessoa.estudar();		
+		pessoa.lazer(2);
+		
+		Pessoa pessoa2 = new Pessoa();
+		pessoa2.nome = "Ciclano";
+		pessoa2.email = "ciclano@a.com";
+		pessoa2.endereco = "Endereco Ciclano";
+		pessoa2.trabalhar();
+		pessoa2.lazer(5);
+		
+		Pessoa tao = new Pessoa();
+		tao.nome = "Tão";
+		tao.email = "tao@b.com";
+		tao.endereco = "";
+		tao.lazer(1);
 		
 	}
 
