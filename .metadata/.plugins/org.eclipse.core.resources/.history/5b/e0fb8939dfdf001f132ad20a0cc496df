@@ -64,17 +64,15 @@ public class Principal {
 			System.out.print("Escrevendo indice = " + indice);			
 			switch(indice) {
 				case 45:
-					System.out.println("- Achei o número 😁!!!");
+					System.out.println("- Achei o número!!!");
 					break;
 				default:
-					System.out.println(" - Não achei 😢");
+					System.out.println("- Não achei 😢");
 					break;
-			}			
+			}
+			
 			indice++;
 		}
-		
-		System.out.println("------------------------");
-		System.out.println(":: ORIENTACAO A OBJETOS ::");
 		
 	}
 

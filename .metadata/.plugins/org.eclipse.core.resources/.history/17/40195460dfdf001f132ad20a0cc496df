@@ -69,12 +69,10 @@ public class Principal {
 				default:
 					System.out.println(" - Não achei 😢");
 					break;
-			}			
+			}
+			
 			indice++;
 		}
-		
-		System.out.println("------------------------");
-		System.out.println(":: ORIENTACAO A OBJETOS ::");
 		
 	}
 

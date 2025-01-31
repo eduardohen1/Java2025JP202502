@@ -61,20 +61,11 @@ public class Principal {
 		
 		int indice = 0;
 		while(indice <= 100) {
-			System.out.print("Escrevendo indice = " + indice);			
-			switch(indice) {
-				case 45:
-					System.out.println("- Achei o número 😁!!!");
-					break;
-				default:
-					System.out.println(" - Não achei 😢");
-					break;
-			}			
+			System.out.println("Escreendo indice = " + indice);
+			
+			
 			indice++;
 		}
-		
-		System.out.println("------------------------");
-		System.out.println(":: ORIENTACAO A OBJETOS ::");
 		
 	}
 

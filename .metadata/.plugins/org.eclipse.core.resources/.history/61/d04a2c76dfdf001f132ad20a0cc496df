@@ -73,9 +73,6 @@ public class Principal {
 			indice++;
 		}
 		
-		System.out.println("------------------------");
-		System.out.println(":: ORIENTACAO A OBJETOS ::");
-		
 	}
 
 }
