@@ -73,7 +73,6 @@ public class Principal {
 			indice++;
 		}
 		
-		//POO
 		System.out.println("------------------------");
 		System.out.println(":: ORIENTACAO A OBJETOS ::");
 		/*Pessoa pessoa = new Pessoa();

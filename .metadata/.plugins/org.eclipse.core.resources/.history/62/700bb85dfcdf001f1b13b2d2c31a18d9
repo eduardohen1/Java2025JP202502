@@ -73,7 +73,6 @@ public class Principal {
 			indice++;
 		}
 		
-		//POO
 		System.out.println("------------------------");
 		System.out.println(":: ORIENTACAO A OBJETOS ::");
 		/*Pessoa pessoa = new Pessoa();
@@ -140,7 +139,6 @@ public class Principal {
 		System.out.println("* Nome fantasia: " + pessoaJuridica2.getNomeFantasia());
 		System.out.println("* CNPJ: "          + pessoaJuridica2.getCnpj());
 		
-		//POLIMORFISMO
 		System.out.println("--------------------");
 		boolean ehPessoaFisica = false;
 		Pessoa pessoaNet;
