@@ -82,10 +82,7 @@ public class Principal {
 		Pessoa pessoa = new Pessoa("Eduardo", "Endereco", "email");
 		pessoa.estudar();		
 		pessoa.lazer(2);
-		pessoa.setNome("Eduardo Henrique");		
-		System.out.println("* Nome: "     + pessoa.getNome());
-		System.out.println("* Endereco: " + pessoa.getEndereco());
-		System.out.println("* E-mail: "   + pessoa.getEmail());
+		System.out.println("Nome: " + pessoa.getNome());
 		
 		/*Pessoa pessoa2 = new Pessoa();
 		pessoa2.nome = "Ciclano";
@@ -102,12 +99,6 @@ public class Principal {
 		Pessoa tao = new Pessoa("Tão", "Endereco", "Email");
 		tao.lazer(1);
 		tao.lazer(3);
-		
-		Pessoa jao = new Pessoa("Jão", "jao@jao.com");
-		jao.setEndereco("Novo endereco");
-		System.out.println("* Nome: " + jao.getNome());
-		System.out.println("* Endereco: " + jao.getEndereco());
-		System.out.println("* E-mail: " + jao.getEmail());
 		
 	}
 

@@ -103,12 +103,6 @@ public class Principal {
 		tao.lazer(1);
 		tao.lazer(3);
 		
-		Pessoa jao = new Pessoa("Jão", "jao@jao.com");
-		jao.setEndereco("Novo endereco");
-		System.out.println("* Nome: " + jao.getNome());
-		System.out.println("* Endereco: " + jao.getEndereco());
-		System.out.println("* E-mail: " + jao.getEmail());
-		
 	}
 
 }

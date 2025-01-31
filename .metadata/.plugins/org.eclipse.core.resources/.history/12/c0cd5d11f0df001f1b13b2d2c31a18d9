@@ -82,32 +82,20 @@ public class Principal {
 		Pessoa pessoa = new Pessoa("Eduardo", "Endereco", "email");
 		pessoa.estudar();		
 		pessoa.lazer(2);
-		pessoa.setNome("Eduardo Henrique");		
-		System.out.println("* Nome: "     + pessoa.getNome());
-		System.out.println("* Endereco: " + pessoa.getEndereco());
-		System.out.println("* E-mail: "   + pessoa.getEmail());
 		
-		/*Pessoa pessoa2 = new Pessoa();
+		Pessoa pessoa2 = new Pessoa();
 		pessoa2.nome = "Ciclano";
 		pessoa2.email = "ciclano@a.com";
-		pessoa2.endereco = "Endereco Ciclano";*/
-		Pessoa pessoa2 = new Pessoa("Ciclano", "Endereco", "email");
+		pessoa2.endereco = "Endereco Ciclano";
 		pessoa2.trabalhar();
 		pessoa2.lazer(5);
 		
-		/*Pessoa tao = new Pessoa();
+		Pessoa tao = new Pessoa();
 		tao.nome = "Tão";
 		tao.email = "tao@b.com";
-		tao.endereco = "";*/
-		Pessoa tao = new Pessoa("Tão", "Endereco", "Email");
+		tao.endereco = "";
 		tao.lazer(1);
 		tao.lazer(3);
-		
-		Pessoa jao = new Pessoa("Jão", "jao@jao.com");
-		jao.setEndereco("Novo endereco");
-		System.out.println("* Nome: " + jao.getNome());
-		System.out.println("* Endereco: " + jao.getEndereco());
-		System.out.println("* E-mail: " + jao.getEmail());
 		
 	}
 

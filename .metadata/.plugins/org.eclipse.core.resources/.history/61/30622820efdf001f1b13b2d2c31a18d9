@@ -3,45 +3,12 @@ package br.com.ehmf;
 public class Pessoa {
 	
 	//atributos
-	private String nome;
-	private String endereco;
-	private String email;
+	String nome;
+	String endereco;
+	String email;
 	
 	//construtor(es)
-	public Pessoa(String nome, String endereco, String email) {
-		this.nome = nome;
-		this.endereco = endereco;
-		this.email = email;
-	}
 	
-	public Pessoa(String nome, String email) {
-		this.nome = nome;
-		this.email = email;
-		this.endereco = "-";
-	}
-	
-	//GETs SETs
-	public String getNome() {
-		//crio uma auditoria de quem está pegando o nome
-		return this.nome;
-	}
-	
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
-			
-	public String getEndereco() {
-		return endereco;
-	}
-
-	public void setEndereco(String endereco) {
-		this.endereco = endereco;
-	}
-	
-	public String getEmail() {
-		return email;
-	}
-
 	//métodos
 	public void trabalhar() {
 		System.out.println(nome + " indo para o trabalho");
@@ -83,7 +50,8 @@ public class Pessoa {
 		}		
 	}
 	
-		
+	
+	
 	private void dormir() {
 		System.out.println("Colocar pijama");
 		System.out.println("Arrumar a cama");

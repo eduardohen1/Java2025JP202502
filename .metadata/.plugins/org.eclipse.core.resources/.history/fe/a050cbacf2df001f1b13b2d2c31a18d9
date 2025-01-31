@@ -14,12 +14,6 @@ public class Pessoa {
 		this.email = email;
 	}
 	
-	public Pessoa(String nome, String email) {
-		this.nome = nome;
-		this.email = email;
-		this.endereco = "-";
-	}
-	
 	//GETs SETs
 	public String getNome() {
 		//crio uma auditoria de quem está pegando o nome
