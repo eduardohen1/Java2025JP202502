@@ -90,4 +90,8 @@ public class Pessoa {
 		System.out.println("Dormir");
 	}
 	
+	public void save() {
+		System.out.println("Salvar pessoa no Banco de Dados");
+	}
+	
 }

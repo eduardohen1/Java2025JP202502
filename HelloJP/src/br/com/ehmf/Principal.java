@@ -105,10 +105,59 @@ public class Principal {
 		
 		Pessoa jao = new Pessoa("Jão", "jao@jao.com");
 		jao.setEndereco("Novo endereco");
-		System.out.println("* Nome: " + jao.getNome());
+		System.out.println("* Nome: "     + jao.getNome());
 		System.out.println("* Endereco: " + jao.getEndereco());
-		System.out.println("* E-mail: " + jao.getEmail());
+		System.out.println("* E-mail: "   + jao.getEmail());
 		
+		//HERANÇA
+		PessoaFisica pessoaFisica = new PessoaFisica("Nome", "Endereco",
+				                                "Email", "cpf");
+		System.out.println("* Nome: "     + pessoaFisica.getNome());
+		System.out.println("* Endereco: " + pessoaFisica.getEndereco());
+		System.out.println("* E-mail: "   + pessoaFisica.getEmail());
+		System.out.println("* CPF: "      + pessoaFisica.getCpf());
+		System.out.println("--------------------");
+		
+		PessoaJuridica pessoaJuridica = new PessoaJuridica(
+				"Nome Juridico", "Endereco", "Email",
+				"Nome Fantasia", "CNPJ");
+		
+		System.out.println("* Nome: "          + pessoaJuridica.getNome());
+		System.out.println("* Endereco: "      + pessoaJuridica.getEndereco());
+		System.out.println("* E-mail: "        + pessoaJuridica.getEmail());
+		System.out.println("* Nome fantasia: " + pessoaJuridica.getNomeFantasia());
+		System.out.println("* CNPJ: "          + pessoaJuridica.getCnpj());
+		
+		System.out.println("--------------------");		
+		PessoaJuridica pessoaJuridica2 = new PessoaJuridica(
+				"Nome Juridico2", "Endereco2", "Email2",
+				"Nome Fantasia2", "CNPJ2",1);
+		
+		System.out.println("* Nome: "          + pessoaJuridica2.getNome());
+		System.out.println("* Endereco: "      + pessoaJuridica2.getEndereco());
+		System.out.println("* E-mail: "        + pessoaJuridica2.getEmail());
+		System.out.println("* Nome fantasia: " + pessoaJuridica2.getNomeFantasia());
+		System.out.println("* CNPJ: "          + pessoaJuridica2.getCnpj());
+		
+		System.out.println("--------------------");
+		boolean ehPessoaFisica = false;
+		Pessoa pessoaNet;
+		// receber dados de outro servidor (BD, API, XML) e depois vejo se
+		//  ele é Pessoa Física ou Juridica;
+		String xml = "asdfasdfasfa";
+		// tratar o xml para virar Objeto:
+		// depois de tratado identifiquei que os dados são de 
+		//  pessoa Física.
+		ehPessoaFisica = false;
+		
+		if(ehPessoaFisica) {
+			pessoaNet = new PessoaFisica("Zé", "End Ze", "Email do Ze",
+					                     "CPF do Ze");
+		}else {
+			pessoaNet = new PessoaJuridica("Zé", "End Ze", "Email do Ze",
+					                       "Lojinha do Ze", "CNPJ");
+		}
+		pessoaNet.save();
 	}
 
 }

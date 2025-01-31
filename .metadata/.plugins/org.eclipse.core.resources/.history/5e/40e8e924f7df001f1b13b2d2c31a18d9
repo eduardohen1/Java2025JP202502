@@ -1,0 +1,17 @@
+package br.com.ehmf;
+
+public class PessoaJuridica extends Pessoa {
+	
+	//Atributos
+	private String nomeFantasia;
+	private String cnpj;
+	
+	//construtor
+	public PessoaJuridica(String nomeFantasia, String cnpj) {
+		this.nomeFantasia = nomeFantasia;
+		this.cnpj = cnpj;
+	}
+	
+	//GETs SETs
+
+}

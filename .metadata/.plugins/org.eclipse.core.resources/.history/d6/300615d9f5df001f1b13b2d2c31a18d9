@@ -1,0 +1,16 @@
+package br.com.ehmf;
+
+public class PessoaFisica extends Pessoa {	
+	
+	//atributos
+	private String cpf;
+	
+	//contrator
+	public PessoaFisica(String cpf) {
+		this.cpf = cpf;
+	}
+	
+	//GETs SETs
+	
+
+}
