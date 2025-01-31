@@ -1,0 +1,19 @@
+package br.com.ehmf.utils;
+
+import java.io.FileInputStream;
+
+public class Funcoes {
+	public static boolean isNumeric(String numero) {
+		try {
+			Double d = Double.parseDouble(numero);
+			return true;
+		}catch(Exception e) {
+			return false;
+		}
+	}
+	
+	public static void lerArquivo(String nome) {
+		FileInputStream file = new FileInputStream(nome);
+	}
+	
+}

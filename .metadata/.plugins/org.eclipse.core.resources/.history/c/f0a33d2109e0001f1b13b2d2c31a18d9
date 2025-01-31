@@ -1,0 +1,5 @@
+package br.com.ehmf.exception;
+
+public class LimitePixExcedidoException {
+
+}

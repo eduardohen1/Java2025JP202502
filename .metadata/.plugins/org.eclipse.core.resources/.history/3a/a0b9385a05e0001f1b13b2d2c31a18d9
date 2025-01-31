@@ -1,0 +1,12 @@
+package br.com.ehmf.utils;
+
+public class Fucoes {
+	public static boolean isNumeric(String numero) {
+		try {
+			Double d = Double.parseDouble(numero);
+			return true;
+		}catch(Exception e) {
+			return false;
+		}
+	}
+}

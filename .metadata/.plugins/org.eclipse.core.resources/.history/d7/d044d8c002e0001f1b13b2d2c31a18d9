@@ -1,0 +1,189 @@
+package br.com.ehmf;
+
+public class Principal {
+
+	public static void main(String[] args) {
+		System.out.println(">>> Hello JP!!!");
+		System.out.println("------------------------");
+		System.out.println(":: OPERADORES LOGICOS ::");
+		
+		//validacao por operador lógico
+		boolean condicao = true;
+		if(condicao == true) {
+			System.out.println("* Minha condicao e Verdadeira!");
+		}else {
+			System.out.println("* Minha condicao e Falsa!");
+		}
+		condicao = false;
+		if(!condicao) {
+			System.out.println("Variavel ainda false");
+		}
+		int idade = 15;
+		if(idade < 15) 
+			System.out.println("Ainda não teve festa");
+		else 
+			System.out.println("Vou ter que gastar com festa!");
+		
+		idade = 0;
+		switch(idade) {
+			case 2:
+				System.out.println("Ainda esta de fralda");
+				break;
+			case 15:
+				System.out.println("Vamos ter festa");
+				break;
+			case 16:
+				System.out.println("Posso votar nas eleicoes");
+				break;
+			case 18:
+			case 19:
+			case 20:
+				System.out.println("Posso tirar habilitacao");
+				break;
+			default:
+				if(idade > 0) {
+					System.out.println("Aqui pode qualquer valor que nao esteja escrito");
+				}
+				break;
+		}
+		
+		//looping
+		int max = 21;
+		for(int numero = 0; numero <= max; numero++) {
+			//System.out.println("> " + numero);
+			//colocar * na frente do número se ele é par
+			if(numero % 2 == 0) {
+				System.out.println("> " + numero + " *");
+			}else {
+				System.out.println("> " + numero);
+			}
+		}
+		
+		int indice = 0;
+		while(indice <= 100) {
+			System.out.print("Escrevendo indice = " + indice);			
+			switch(indice) {
+				case 45:
+					System.out.println("- Achei o número 😁!!!");
+					break;
+				default:
+					System.out.println(" - Não achei 😢");
+					break;
+			}			
+			indice++;
+		}
+		
+		//POO
+		System.out.println("------------------------");
+		System.out.println(":: ORIENTACAO A OBJETOS ::");
+		/*Pessoa pessoa = new Pessoa();
+		pessoa.nome = "Eduardo";
+		pessoa.email = "eherique@minsait.com";
+		pessoa.endereco = "Minas Gerais";*/
+		Pessoa pessoa = new Pessoa("Eduardo", "Endereco", "email");
+		pessoa.estudar();		
+		pessoa.lazer(2);
+		pessoa.setNome("Eduardo Henrique");		
+		System.out.println("* Nome: "     + pessoa.getNome());
+		System.out.println("* Endereco: " + pessoa.getEndereco());
+		System.out.println("* E-mail: "   + pessoa.getEmail());
+		
+		/*Pessoa pessoa2 = new Pessoa();
+		pessoa2.nome = "Ciclano";
+		pessoa2.email = "ciclano@a.com";
+		pessoa2.endereco = "Endereco Ciclano";*/
+		Pessoa pessoa2 = new Pessoa("Ciclano", "Endereco", "email");
+		pessoa2.trabalhar();
+		pessoa2.lazer(5);
+		
+		/*Pessoa tao = new Pessoa();
+		tao.nome = "Tão";
+		tao.email = "tao@b.com";
+		tao.endereco = "";*/
+		Pessoa tao = new Pessoa("Tão", "Endereco", "Email");
+		tao.lazer(1);
+		tao.lazer(3);
+		
+		Pessoa jao = new Pessoa("Jão", "jao@jao.com");
+		jao.setEndereco("Novo endereco");
+		System.out.println("* Nome: "     + jao.getNome());
+		System.out.println("* Endereco: " + jao.getEndereco());
+		System.out.println("* E-mail: "   + jao.getEmail());
+		
+		//HERANÇA
+		PessoaFisica pessoaFisica = new PessoaFisica("Nome", "Endereco",
+				                                "Email", "cpf");
+		System.out.println("* Nome: "     + pessoaFisica.getNome());
+		System.out.println("* Endereco: " + pessoaFisica.getEndereco());
+		System.out.println("* E-mail: "   + pessoaFisica.getEmail());
+		System.out.println("* CPF: "      + pessoaFisica.getCpf());
+		System.out.println("--------------------");
+		
+		PessoaJuridica pessoaJuridica = new PessoaJuridica(
+				"Nome Juridico", "Endereco", "Email",
+				"Nome Fantasia", "CNPJ");
+		
+		System.out.println("* Nome: "          + pessoaJuridica.getNome());
+		System.out.println("* Endereco: "      + pessoaJuridica.getEndereco());
+		System.out.println("* E-mail: "        + pessoaJuridica.getEmail());
+		System.out.println("* Nome fantasia: " + pessoaJuridica.getNomeFantasia());
+		System.out.println("* CNPJ: "          + pessoaJuridica.getCnpj());
+		
+		System.out.println("--------------------");		
+		PessoaJuridica pessoaJuridica2 = new PessoaJuridica(
+				"Nome Juridico2", "Endereco2", "Email2",
+				"Nome Fantasia2", "CNPJ2",1);
+		
+		System.out.println("* Nome: "          + pessoaJuridica2.getNome());
+		System.out.println("* Endereco: "      + pessoaJuridica2.getEndereco());
+		System.out.println("* E-mail: "        + pessoaJuridica2.getEmail());
+		System.out.println("* Nome fantasia: " + pessoaJuridica2.getNomeFantasia());
+		System.out.println("* CNPJ: "          + pessoaJuridica2.getCnpj());
+		
+		//POLIMORFISMO
+		System.out.println("--------------------");
+		boolean ehPessoaFisica = false;
+		Pessoa pessoaNet;
+		// receber dados de outro servidor (BD, API, XML) e depois vejo se
+		//  ele é Pessoa Física ou Juridica;
+		String xml = "asdfasdfasfa";
+		// tratar o xml para virar Objeto:
+		// depois de tratado identifiquei que os dados são de 
+		//  pessoa Física.
+		ehPessoaFisica = false;
+		
+		if(ehPessoaFisica) {
+			pessoaNet = new PessoaFisica("Zé", "End Ze", "Email do Ze",
+					                     "CPF do Ze");
+		}else {
+			pessoaNet = new PessoaJuridica("Zé", "End Ze", "Email do Ze",
+					                       "Lojinha do Ze", "CNPJ");
+		}
+		pessoaNet.save();
+		
+		//TRATAMENTO DE EXCEÇÕES
+		System.out.println("--------------------");
+		System.out.println(":: TRATAMENTO DE EXCECOES ::");
+		
+		int valor = 10;
+		System.out.println("Vou fazer a divisao!");		
+		int resposta = 0;
+		int divisao = 1;
+		try {
+			resposta = valor / divisao;
+			System.out.println("Resposta: " + resposta);
+			
+			int[] correcoes = {1,6,7,10,4};
+			for(int i = 0; i < 5; i++) {
+				System.out.println(">Correcoes: " + correcoes[i]);
+			}
+			
+		}catch(ArithmeticException e) {
+			System.err.println("ERROR! " + e.getMessage());
+		}
+		int correcao = resposta + 2;
+		System.out.println("A correcao monetaria e de R$" + correcao);
+		
+	}
+
+}

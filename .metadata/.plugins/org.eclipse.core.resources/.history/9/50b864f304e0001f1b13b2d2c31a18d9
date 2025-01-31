@@ -1,0 +1,14 @@
+package br.com.ehmf.utils;
+
+public class Funcoes {
+	
+	public boolean isNumeric(String numero) {
+		try {
+			Double d = Double.parseDouble(numero);
+			return true;
+		}catch(Exception e) {
+			return false;
+		}
+	}
+	
+}

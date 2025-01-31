@@ -1,5 +1,11 @@
 package br.com.ehmf;
 
+import java.io.FileNotFoundException;
+
+import br.com.ehmf.exception.LimitePixExcedidoException;
+import br.com.ehmf.utils.ContaBancaria;
+import br.com.ehmf.utils.Funcoes;
+
 public class Principal {
 
 	public static void main(String[] args) {
@@ -160,6 +166,63 @@ public class Principal {
 					                       "Lojinha do Ze", "CNPJ");
 		}
 		pessoaNet.save();
+		
+		//TRATAMENTO DE EXCEÇÕES
+		System.out.println("--------------------");
+		System.out.println(":: TRATAMENTO DE EXCECOES ::");
+		
+		int valor = 10;
+		System.out.println("Vou fazer a divisao!");		
+		int resposta = 0;
+		int divisao = 0;
+		try {
+			resposta = valor / divisao;
+			System.out.println("Resposta: " + resposta);
+			
+			int[] correcoes = {1,6,7,10,4};
+			for(int i = 0; i < 5; i++) {
+				System.out.println(">Correcoes: " + correcoes[i]);
+			}			
+			
+		}catch(ArithmeticException e) {
+			System.err.println("ERROR ARITIMETICO! " + e.getMessage());
+		}catch(ArrayIndexOutOfBoundsException e) {
+			System.err.println("ERROR ARRAY! " + e.getMessage());
+		}catch (Exception e) {
+			System.err.println("ERROR GENERICO! " + e.getMessage());
+		}
+		
+		int correcao = resposta + 2;
+		System.out.println("A correcao monetaria e de R$" + correcao);
+		
+		//THOWS
+		String retornoWeb = "5";
+		if(Funcoes.isNumeric(retornoWeb)) {
+			System.out.println("A variavel retornoWeb é numerica!");
+		}else {
+			System.out.println("A variavel retornoWeb NAO é numerica!");
+		}
+		
+		try {
+			String nomeArquivo = "Principal.class";
+			Funcoes.abrirArquivo(nomeArquivo);
+		}catch(FileNotFoundException e) {
+			System.err.println("ERROR! " + e.getMessage());
+		}
+		System.out.println("Segui a execucao do prog");
+		
+		//Exceção personalizada
+		ContaBancaria contaBancaria1 = new ContaBancaria(1000.0);
+		ContaBancaria contaBancaria2 = new ContaBancaria();
+		
+		try {
+			contaBancaria1.fazerPix(999.0);
+			contaBancaria2.fazerPix(1500.0);
+		}catch (LimitePixExcedidoException e) {
+			System.err.println("ERROR! " + e.getMessage());
+		}
+		
+		System.out.println("Transferencia feita");
 	}
 
 }

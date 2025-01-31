@@ -1,0 +1,7 @@
+package br.com.ehmf.utils;
+
+public class ContaBancaria {
+	
+	private Double limitePix = 2000.0; //limite diario de transferencia
+
+}

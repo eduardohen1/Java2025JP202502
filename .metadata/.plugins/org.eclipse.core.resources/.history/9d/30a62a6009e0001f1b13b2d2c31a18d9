@@ -1,0 +1,23 @@
+package br.com.ehmf.utils;
+
+public class ContaBancaria {
+	
+	private Double limitePix = 2000.0; //limite diario de transferencia
+	
+	public ContaBancaria() {
+		
+	}
+	
+	public ContaBancaria(Double limitePix) {
+		this.limitePix = limitePix;
+	}
+	
+	public void fazerPix(Double quantia) {
+		if(quantia > this.limitePix) {
+			//lancar excecao
+		}else {
+			System.out.println("PIX realizado com sucesso!");
+		}
+	}
+
+}
