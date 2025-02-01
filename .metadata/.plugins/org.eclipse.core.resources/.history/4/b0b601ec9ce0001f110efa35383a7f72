@@ -325,15 +325,6 @@ public class Principal {
 			System.out.println(" - " + capital.getValue());
 		}
 		
-		System.out.println("--------------------");
-		Map<Integer, Pessoa> mapPessoas = new HashMap<Integer, Pessoa>();
-		mapPessoas.put(1, pessoa);
-		mapPessoas.put(2, pessoa2);
-		mapPessoas.put(3, jao);
-		
-		System.out.println("Pessoa do Jao: " + jao.getNome());
-		System.out.println("Pessoa do Jao no map: " + mapPessoas.get(3).getNome());
-		
 	}
 
 }

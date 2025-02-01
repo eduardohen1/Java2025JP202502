@@ -4,10 +4,8 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
-import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
-import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -299,6 +297,7 @@ public class Principal {
 					" | E-mail: " + p.getEmail());
 		}
 		
+		
 		//COLECOES - SET:
 		System.out.println("--------------------");
 		System.out.println(":: COLECOES - SET ::");
@@ -312,27 +311,6 @@ public class Principal {
 			System.out.println("Cor: " + cor);
 		}
 		
-		//COLECOES - HASHMAP:
-		System.out.println("--------------------");
-		System.out.println(":: COLECOES - HASHMAP ::");
-		Map<String, String> paises = new HashMap<String, String>();
-		paises.put("Brasil", "Brasilia");
-		paises.put("Franca", "Paris");
-		paises.put("Portugal", "Lisboa");
-		System.out.println("Capitais: ");
-		//imprimir a lista das capitais:
-		for(Map.Entry<String, String> capital : paises.entrySet()) {
-			System.out.println(" - " + capital.getValue());
-		}
-		
-		System.out.println("--------------------");
-		Map<Integer, Pessoa> mapPessoas = new HashMap<Integer, Pessoa>();
-		mapPessoas.put(1, pessoa);
-		mapPessoas.put(2, pessoa2);
-		mapPessoas.put(3, jao);
-		
-		System.out.println("Pessoa do Jao: " + jao.getNome());
-		System.out.println("Pessoa do Jao no map: " + mapPessoas.get(3).getNome());
 		
 	}
 
