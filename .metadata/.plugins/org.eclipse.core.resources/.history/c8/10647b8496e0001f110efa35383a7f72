@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
-import java.util.stream.Collectors;
 
 import br.com.ehmf.exception.LimitePixExcedidoException;
 import br.com.ehmf.utils.ContaBancaria;
@@ -236,13 +235,11 @@ public class Principal {
 		List<String> nomes = new ArrayList<String>();
 		nomes.add("Maria");
 		nomes.add("Joao");
-		nomes.add("Alex");
 		nomes.add("Jose");
 		nomes.add("Abel");
 		nomes.add("Carla");
 		nomes.add("Fernanda");
-		nomes.add("Ana");		
-				
+		
 		/*for(int ind = 0; ind < nomes.size(); ind++) {
 			String nome = nomes.get(ind);
 			System.out.println("* Nome: " + nome);
@@ -255,35 +252,10 @@ public class Principal {
 		System.out.println("--------------------");
 		
 		//Ordenar minha lista:
-		
-		Collections.sort(nomes);		
+		Collections.sort(nomes);
 		for(String nome : nomes) {
 			System.out.println("* Nome: " + nome);
 		}
-		
-		System.out.println("--------------------");
-		//filtrar todos que comecem com a letra J
-		List<String> nomesFiltrados = nomes.stream()
-				.filter(nome -> nome.startsWith("J")) //lambda
-				.collect(Collectors.toList());
-		/*
-		 * Forma longa do código acima:		
-		List<String> listaNova = new ArrayList<String>();
-		for(String nome : nomes) {
-			if(nome.startsWith("J")) {
-				listaNova.add(nome);
-			}			
-		}
-		*/
-		//filtrar todos que comecem com a letra A
-		nomesFiltrados = nomes.stream()
-				.filter(nome -> nome.startsWith("A")) //lambda
-				.collect(Collectors.toList());
-		
-		System.out.println("--------------------");
-		
-		
-		
 		
 		//-------------------------------------
 		

@@ -255,7 +255,6 @@ public class Principal {
 		System.out.println("--------------------");
 		
 		//Ordenar minha lista:
-		
 		Collections.sort(nomes);		
 		for(String nome : nomes) {
 			System.out.println("* Nome: " + nome);
