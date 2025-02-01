@@ -38,6 +38,13 @@ public class Produtos {
 		this.preco = preco;
 	}
 	
-	
+	@Override
+	public String toString() {
+		String retorno = "[" + 
+				"Nome: "             + this.nome         + ", " + 
+			    "Código de barras: " + this.codigoBarras + ", " + 
+			    "Preco: "            + this.preco        + "]";
+		return retorno;
+	}
 	
 }
