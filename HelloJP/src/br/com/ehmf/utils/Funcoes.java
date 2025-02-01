@@ -4,6 +4,8 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 
 public class Funcoes {
+	private int indice = 2;
+	
 	public static boolean isNumeric(String numero) {
 		try {
 			Double d = Double.parseDouble(numero);
