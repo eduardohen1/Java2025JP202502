@@ -3,16 +3,27 @@ package br.com.ehmf.AppProdutos.resource;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.ehmf.AppProdutos.model.Produtos;
+import br.com.ehmf.AppProdutos.repository.ProdutosRepository;
 
 @RestController
 @RequestMapping("/api") //http://localhost:8080/api
 public class AppProdutosResource {
 
+	@Autowired //injecao de dependencia
+	private ProdutosRepository produtosRepository;
+	
+	@GetMapping("lista") //http://localhost:8080/api/lista
+	public List<Produtos> listar(){
+		List<Produtos> listProdutos = produtosRepository.findAll();		
+		return listProdutos;
+	}
+	
 	@GetMapping //http://localhost:8080/api
 	public String getApi() {
 		return "API Java funcionando! 😎";
@@ -54,6 +65,8 @@ public class AppProdutosResource {
 		
 		return listProdutos;
 	}
+	
+	
 	
 	
 }
