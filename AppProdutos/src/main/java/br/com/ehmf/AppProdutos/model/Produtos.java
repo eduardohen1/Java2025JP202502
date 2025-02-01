@@ -2,13 +2,15 @@ package br.com.ehmf.AppProdutos.model;
 
 public class Produtos {
 	
+	private Long id;
 	private String codigoBarras;
 	private String nome;
 	private Double preco;
 	
 	public Produtos() { }
 
-	public Produtos(String codigoBarras, String nome, Double preco) {
+	public Produtos(Long id, String codigoBarras, String nome, Double preco) {
+		this.id = id;
 		this.codigoBarras = codigoBarras;
 		this.nome = nome;
 		this.preco = preco;

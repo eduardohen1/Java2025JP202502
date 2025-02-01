@@ -30,7 +30,7 @@ public class AppProdutosResource {
 		return produto;
 	}
 	
-	@GetMapping("getProdutos")
+	@GetMapping("getProdutos") //http://localhost:8080/api/getProdutos
 	public List<Produtos> getProdutos(){
 		List<Produtos> listProdutos = new ArrayList<Produtos>();
 		
