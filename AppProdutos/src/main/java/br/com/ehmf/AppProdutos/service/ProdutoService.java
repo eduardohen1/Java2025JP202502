@@ -12,7 +12,7 @@ import br.com.ehmf.AppProdutos.repository.ProdutosRepository;
 @Service
 public class ProdutoService {
 
-	@Autowired
+	@Autowired //injeção de dependência
 	private ProdutosRepository produtoRepository;
 	
 	//CRUD - Create
@@ -45,6 +45,16 @@ public class ProdutoService {
 	public Optional<Produtos> findById(Long id){
 		//select * from produto where id = ?id
 		return produtoRepository.findById(id); 
+	}
+	
+	public Optional<Produtos> findByCodigoBarras(String codigoBarras){
+		if(codigoBarras== null) {
+			System.out.println("Número do código de barras nulo.");
+			return null;
+		}else {
+			//select * from produto where codigobarras = ?
+			return produtoRepository.findByCodigoBarras(codigoBarras);
+		}
 	}
 	
 	public List<Produtos> findAll(){
