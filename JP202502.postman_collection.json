@@ -159,6 +159,76 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "POST - Estoque - save",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"quantidade\": 100,\r\n    \"produto\" : {\r\n        \"id\": 2\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/estoque",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"estoque"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - Estoque - findAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/estoque",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"estoque"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - Estoque - findById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/estoque/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"estoque",
+						"1"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }

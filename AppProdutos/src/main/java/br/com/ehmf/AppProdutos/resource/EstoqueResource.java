@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import br.com.ehmf.AppProdutos.model.Estoque;
 import br.com.ehmf.AppProdutos.service.EstoqueService;
+import io.swagger.v3.oas.annotations.Operation;
 
 @RestController
 @RequestMapping("/api/estoque") //http://localhost:8080/api/estoque
@@ -25,7 +26,8 @@ public class EstoqueResource {
 	@Autowired
 	private EstoqueService estoqueService;
 	
-	@PostMapping
+	@PostMapping //POST http://localhost:8080/api/estoque
+	@Operation(summary = "Este endpoint é para gravar um registro de estoque e tem que ter o produto!")
 	public ResponseEntity<Estoque> save(@RequestBody Estoque estoque){
 		Estoque newEstoque = estoqueService.save(estoque);
 		if(newEstoque == null)

@@ -1,4 +1,5 @@
 eclipse.preferences.version=1
+org.eclipse.debug.ui.BreakpointView+org.eclipse.debug.ui.actions.SkipAllBreakpoints=true
 org.eclipse.debug.ui.MemoryHistoryKnownColor=235,235,235
 org.eclipse.debug.ui.MemoryHistoryUnknownColor=170,175,185
 org.eclipse.debug.ui.PREF_CHANGED_VALUE_BACKGROUND=150,80,115
