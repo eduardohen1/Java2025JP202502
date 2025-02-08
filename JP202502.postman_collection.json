@@ -39,13 +39,13 @@
 			"response": []
 		},
 		{
-			"name": "save - POST",
+			"name": "POST Produto - save",
 			"request": {
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"nome\": \"Produto 2\",\r\n    \"codigoBarras\" : \"abc1234\",\r\n    \"preco\": 1000\r\n}",
+					"raw": "{\r\n    \"nome\": \"Produto 4\",\r\n    \"codigoBarras\" : \"abc12345abc\",\r\n    \"preco\": 55115\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -68,7 +68,7 @@
 			"response": []
 		},
 		{
-			"name": "update - PUT",
+			"name": "PUT - Produto - update",
 			"request": {
 				"method": "PUT",
 				"header": [],
@@ -97,7 +97,7 @@
 			"response": []
 		},
 		{
-			"name": "Deletar Produto",
+			"name": "DELETE - Produto - delete",
 			"request": {
 				"method": "DELETE",
 				"header": [],
@@ -112,6 +112,49 @@
 						"api",
 						"produtos",
 						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - Produto - findById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/produtos/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"produtos",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - Produtos - findByCodigoBarras",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/produtos/codBarras/abc12345",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"produtos",
+						"codBarras",
+						"abc12345"
 					]
 				}
 			},
