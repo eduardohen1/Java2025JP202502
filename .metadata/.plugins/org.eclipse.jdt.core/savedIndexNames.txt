@@ -45,7 +45,6 @@ INDEX VERSION 1.134+C:\dev\Desenvolvimento\INDRA\Java2025JP202502\.metadata\.plu
 2855072823.index
 3413270776.index
 2731269573.index
-3426338954.index
 524257172.index
 4055553571.index
 1114981454.index
